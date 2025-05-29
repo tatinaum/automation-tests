@@ -60,5 +60,5 @@ console.log(fibonacci(8));
 console.log(fibonacci(7));
 console.log(fibonacci(NaN));
 console.log(fibonacci(null));
-//fibonacci(null)
-console.log(fibonacci('Hello!'));
+fibonacci(null)
+console.log(fibonacci('Hello!'))
