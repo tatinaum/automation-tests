@@ -25,31 +25,40 @@
 //             - Explanation: The first 8 numbers in the Fibonacci sequence are 0, 1, 1, 2, 3, 5, 8, 13.
 //             - **Expected Output**: **`0, 1, 1, 2, 3, 5, 8, 13`**
 
+// 1. if n = 0 we return 0'
+// 2. if n = 1 , we return 1,
+// 3. if n = -1 , negative message,
+// 4. if n = '' , typeof in Number
+//PseudoCode
+// Check if n is non-numeric input
+// Check if n is 0 or 1
+// Iterate from 2 to the input n
+    // Inside the loop, count the number that should be added to the sequence
+// Return the sequence
 
 function fibonacci(n) {
+  if(typeof n === "number"){
   
-  let fib = [0, 1];
+    if(n === 0){return 0}
+    
+    if(n === 1){return 1}
+
+    let fib = [0, 1];
   
-  for (let i = 2; i < n; i++) {
+    for (let i = 2; i < n; i++) {
     
-  fib[i] = fib[i - 1] + fib[i - 2];
+    fib[i] = fib[i - 1] + fib[i - 2];
     
-    // Index 2  = [0, 1, 1]
-    
-    // Index 3  = [0, 1, 1, 2]
-    
-    // Index 4  = [0, 1, 1, 2, 3]
-    
-    // Index 5 = [0, 1, 1, 2, 3, 5]
-    
-    // Index 6 = [0, 1, 1, 2, 3, 5, 8]
-    
-    // Index 7 = [0, 1, 1, 2, 3, 5, 8, 13]
-    
-  }
+   }
   return fib;
+  }
+  return "Input must be a number";
 }
 
 console.log(fibonacci(5));
 console.log(fibonacci(8));
 console.log(fibonacci(7));
+console.log(fibonacci(NaN));
+console.log(fibonacci(null));
+//fibonacci(null)
+console.log(fibonacci('Hello!'));

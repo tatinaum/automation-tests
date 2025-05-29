@@ -27,6 +27,7 @@
     // Inside the loop, check if the input number is divisible by any of these numbers
     // If yes, return false (the number is not prime)
 // Return true (the number is prime as no divisors were found)
+
 function findPrimeNumber(num) {
     if(typeof num !== "number") {
         return false;
