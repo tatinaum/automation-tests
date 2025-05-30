@@ -37,9 +37,15 @@ console.log(factorial("Hello!"));
 console.log(factorial(5));
 
 function factorial2 (n){
+if (typeof n !== "number") {
+    return "Input must be a number";
+}
+if (n < 0) {
+    return "Factorial is not defined for negative numbers";
+}
 if(n === 0 || n === 1) return 1
 return n * factorial2(n - 1)
 
 }
 
-console.log(factorial2(6))
+console.log(factorial2(6));

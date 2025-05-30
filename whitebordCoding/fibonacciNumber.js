@@ -34,13 +34,14 @@
 // Check if n is 0 or 1
 // Iterate from 2 to the input n
     // Inside the loop, count the number that should be added to the sequence
-// Return the sequence
+// Return the sequence   typeof - operator
+
 
 function fibonacci(n) {
   if(typeof n === "number"){
   
     if(n === 0){return 0}
-    
+    if(n < 0){return "Fibonacci is not defined for negative numbers"}
     if(n === 1){return 1}
 
     let fib = [0, 1];
@@ -62,6 +63,21 @@ console.log(fibonacci(NaN));
 console.log(fibonacci(null));
 fibonacci(null)
 console.log(fibonacci('Hello!'))
+
+function fibonacci2(a){
+  if(a < 0) return "Is negative"
+  if (typeof a != "number") return "Is not a number"
+  let arr = [0,1]
+  
+  for(let i = 1; i < a ; i++){
+    
+    arr.push(arr[i] + arr[i-1])
+  }
+  
+  return arr
+}
+console.log(fibonacci2(5));
+console.log(fibonacci2(8));
 
 const fib2 = n => {
     if(n == 0){
