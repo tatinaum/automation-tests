@@ -19,3 +19,18 @@ console.log(reverseStr(""));
 console.log(reverseStr(1));
 console.log(reverseStr("g"));
 
+
+function reverseWord(word) {
+  return word.split('').reverse().join('');
+}
+
+// Example usage:
+const reversed = reverseWord("offer");
+console.log(reversed); // Output: "reffo"
+
+// Explanation:
+// .split('') converts the string into an array of characters.
+
+// .reverse() reverses the array.
+
+// .join('') joins the array back into a string.
